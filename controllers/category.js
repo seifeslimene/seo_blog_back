@@ -30,7 +30,6 @@ const list = (req, res) => {
 };
 
 const read = (req, res) => {
-  console.log({ req: req.params })
   const slug = req.params.slug.toLowerCase();
   Category.findOne({ slug }).exec((err, category) => {
     if (err) {
